@@ -1,0 +1,5 @@
+/.git
+/build
+/source_old
+/node_modules
+package-lock.json
