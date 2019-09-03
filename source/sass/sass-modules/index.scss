@@ -1,0 +1,169 @@
+.promo {
+  width: 100%;
+  background-image: url("../img/shape_promo.png"), url("../img/background photo.jpg");
+  background-position: center bottom, center -50px;
+  background-size: 100% 57px, cover;
+  background-repeat: no-repeat;
+
+  img {
+    margin: 78px auto 80px;
+  }
+}
+
+.adventages {
+  padding-top: 62px;
+
+  h2 + p {
+    margin-top: 33px;
+    margin-bottom: 52px;
+  }
+}
+
+.adventages__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  h3,
+  h4 {
+    line-height: 21px;
+  }
+
+  > li {
+    height: 256px;
+    background-color: #eeeeee;
+
+    &:not(:first-of-type):not(:nth-of-type(2)) {
+      padding: 48px 5% 63px;
+    }
+  }
+
+  .adventage-item_extended {
+    position: relative;
+    width: 100%;
+    display: flex;
+
+    .adventage-content {
+      padding: 48px 5% 63px;
+      background-color: $color__blue;
+      height: 100%;
+      color: #fff;
+    }
+
+    &:first-of-type {
+      position: relative;
+      margin-bottom: 333px;
+    }
+
+    &:first-of-type:after,
+    &:nth-of-type(2):before {
+      content: "";
+      width: 66%;
+      flex-grow: 1;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    &:first-of-type:after {
+      background-image: url("../img/adventage_1.jpg");
+    }
+
+    &:nth-of-type(2):before {
+      background-image: url("../img/adventage_2.jpg");
+    }
+  }
+
+  .adventage-sublist {
+    position: absolute;
+    bottom: -333px;
+    left: 0;
+    right: 0;
+    height: 333px;
+    display: flex;
+    color: #000;
+
+    h4 {
+      margin-bottom: 28px;
+    }
+
+    li {
+      position: relative;
+      padding: 161px 5% 40px;
+    }
+  }
+
+  .adventage-sublist__icon {
+    position: absolute;
+    bottom: 198px;
+    left: 50%;
+    margin-left: -38px;
+  }
+
+  .adventage-number {
+    display: block;
+    margin: 27px 0 28px;
+  }
+}
+
+.booking-hotel {
+  position: relative;
+  padding-top: 55px;
+  height: 765px;
+
+  .higth-heading {
+    display: block;
+    font-size: 30px;
+    line-height: 36px;
+
+    + p {
+      margin-top: 30px;
+      line-height: 24px;
+      margin-bottom: 50px;
+    }
+  }
+
+  .booking-form, > .button {
+      position: absolute;
+      width: 568px!important;
+      left: 50%;
+      margin-left: -284px;
+  }
+
+  .booking-form {
+    padding: 55px;
+    bottom: 78px;
+    height: 395px;
+    font-weight: bold;
+    background-color: #fff;
+    z-index: 5;
+    filter: drop-shadow($const__shadow);
+  }
+
+  .button {
+    padding: 14px 45px;
+    width: 100%;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+  }
+
+  > .button {
+    bottom: 473px;
+    padding: 30px 45px;
+  }
+
+  .booking-map,
+  iframe {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 473px;
+    z-index: 3;
+  }
+
+  iframe {
+    z-index: 4;
+  }
+}

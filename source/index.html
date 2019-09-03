@@ -3,10 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>Главная страница | Sedona</title>
-  //Подключаем normalize.css из одного из наиболее популярных cdn, так как больше вероятность, что он кэшируется
-  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.min.css">
-  <script src="js/script.js" type="text/javascript"></script>
+  <!-- <script src="js/script.js" type="text/javascript"></script> -->
 </head>
 <body>
   <div class="container">
@@ -30,45 +29,54 @@
         <h2>Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</h2>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
         <ul class="adventages__list">
-          <li>
-            <div class="adventage-content">
+          <li class="adventage-item_extended">
+            <div class="adventage-content layout-column">
               <h3>Настоящий<br> городок</h3>
               <span class="adventage-number">- №1 -</span>
               <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
               <ul class="adventage-sublist">
-                <li class="icon-home">
+                <li class="icon-home layout-column">
+                  <svg width="76" height="76" class="adventage-sublist__icon">
+                    <use xlink:href="img/sprite.svg#icon-1"></use>
+                  </svg>
                   <h4>Жилье</h4>
                   <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                 </li>
-                <li class="icon-foot">
+                <li class="icon-foot layout-column">
+                  <svg width="76" height="76" class="adventage-sublist__icon">
+                    <use xlink:href="img/sprite.svg#icon-2"></use>
+                  </svg>
                   <h4>Еда</h4>
                   <p>Всегда заказывайте фирменный бургер. Вы не разочаруетесь!</p>
                 </li>
-                <li class="icon-gift">
+                <li class="icon-gift layout-column">
+                  <svg width="76" height="76" class="adventage-sublist__icon">
+                    <use xlink:href="img/sprite.svg#icon-3"></use>
+                  </svg>
                   <h4>Сувениры</h4>
                   <p>Не только китайского, но и местного производства!</p>
                 </li>
               </ul>
             </div>
           </li>
-          <li>
-            <div class="adventage-content">
+          <li class="adventage-item_extended">
+            <div class="adventage-content layout-column">
               <h3>Там есть<br> мост дьявола</h3>
               <span class="adventage-number">- №2 -</span>
               <p>Да, по нему можно пройти! <br>Если конечно вы осмелитесь</p>
             </div>
           </li>
-          <li>
+          <li class="layout-column">
             <h3>Небольшая<br> площадь</h3>
             <span class="adventage-number">- №3 -</span>
             <p>Все достопримечательности находятся очень близко</p>
           </li>
-          <li>
+          <li class="layout-column">
             <h3>Красивая<br> дорога</h3>
             <span class="adventage-number">- №4 -</span>
             <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
-          <li>
+          <li class="layout-column">
             <h3>Мало<br> туристов</h3>
             <span class="adventage-number">- №5 -</span>
             <p>Большинство едет в Гранд Каньон и толпится там</p>
@@ -77,7 +85,7 @@
       </section>
       <section class="booking-hotel">
         <h2 class="visually-hidden">Забронировать отель</h2>
-        <b class="like-heading">Заинтересовались?</b>
+        <b class="higth-heading">Заинтересовались?</b>
         <p class="booking-notice">Укажите предполагаемые даты поездки, <br>
           и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <input type="checkbox" id="toggle-booking-form-checkbox" name="toggle-booking-form-checkbox" class="visually-hidden" checked="checked">
@@ -86,14 +94,14 @@
           <p class="input-group">
             <label>Дата заезда:</label>
             <input type="text" name="date-start" value="24 апреля 2017">
-            <svg width="21" height="22" class="calendar-widget">
+            <svg width="21" height="22" class="button__calendar_widget">
               <use xlink:href="img/sprite.svg#calendar"></use>
             </svg>
           </p>
           <p class="input-group">
             <label>Дата выезда:</label>
             <input type="text" name="date-end" value="5 мая 2017">
-            <svg width="21" height="22" class="calendar-widget">
+            <svg width="21" height="22" class="button__calendar_widget">
               <use xlink:href="img/sprite.svg#calendar"></use>
             </svg>
           </p>
@@ -113,19 +121,40 @@
           </p>
           <button type="submit" name="booking-form-submit" class="booking-form-submit button button-blue">Найти</button>
         </form>
-        <img src="img/map.jpg" alt="Карта гостиниц в Седоне" class="booking-map" width="1200" height="473">
+        <img src="img/map.jpg" alt="Карта гостиниц в Седоне" class="booking-map" width="100%" height="473">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d704736.8095286125!2d-111.92643430522014!3d34.861606205665694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1567205962172!5m2!1sru!2sru"
           width="100%" height="473" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
       </section>
     </main>
     <footer class="main-footer">
-      <span class="footer-column hash-tag">#visitsedona</span>
-      <ul class="footer-column social-buttons">
-        <li class="social-twitter button-blue"><a href="twitter.com"><span class="visually-hidden">twitter</span></a></li>
-        <li class="social-facebook button-blue"><a href="facebook.com"><span class="visually-hidden">facebook</span></a></li>
-        <li class="social-youtube button-blue"><a href="youtube.com"><span class="visually-hidden">youtube</span></a></li>
+      <strong class="layout-column hash-tag">#visitsedona</strong>
+      <ul class="layout-column  social-buttons">
+        <li class="button button-blue">
+          <a href="twitter.com">
+            <span class="visually-hidden">twitter</span>
+            <svg width="17" height="15">
+              <use xlink:href="img/sprite.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="button button-blue">
+          <a href="facebook.com">
+            <span class="visually-hidden">facebook</span>
+            <svg width="12" height="22">
+              <use xlink:href="img/sprite.svg#fb-icon"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="button button-blue">
+          <a href="youtube.com">
+            <span class="visually-hidden">youtube</span>
+            <svg width="20" height="16" >
+              <use xlink:href="img/sprite.svg#youtube"></use>
+            </svg>
+          </a>
+        </li>
       </ul>
-      <div class="footer-column footer-copyright">
+      <div class="layout-column footer-copyright">
         <span>website by</span>
         <a href="https://htmlacademy.ru/intensive/htmlcss">
           <svg width="115" height="41">

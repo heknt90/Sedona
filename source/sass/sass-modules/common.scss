@@ -1,0 +1,302 @@
+body {
+  width: 100%;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  background-color: $color__body;
+  text-align: center;
+}
+
+ul {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.hight-heading,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  background-color: #fff;
+  filter: drop-shadow($const__shadow);
+}
+
+.layout-column {
+  width: 33%;
+  flex-grow: 1;
+}
+
+.visually-hidden {
+  position: absolute;
+  padding: 0;
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+  transition: all 1s;
+}
+
+.main-logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -69px;
+}
+
+.site-navigation__list {
+  margin: 0 6%;
+  font-weight: bold;
+  line-height: 26px;
+  color: #000;
+
+  li {
+    width: 20%;
+    float: left;
+    padding: 20px 0 22px;
+    text-align: left;
+
+    &:nth-of-type(3),
+    &:nth-of-type(4) {
+      float: right;
+      text-align: right;
+    }
+
+    &.current-page {
+      color: $color__brown;
+    }
+  }
+}
+
+.footer-copyright a,
+.hotel-title,
+.site-navigation__list li {
+  color: #000;
+  transition: color 0.6s;
+
+  &:hover {
+    color: $color__blue;
+  }
+
+  &:active {
+    color: $color__gray;
+  }
+}
+
+.site-navigation__list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.adventage-content,
+.adventages__list li,
+.booking-hotel,
+.booking-form,
+.button {
+  box-sizing: border-box;
+}
+
+.button {
+  display: block;
+  padding: 3px 17px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 21px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  transition: background-color 0.6s, color 0.6s;
+  cursor: pointer;
+}
+
+.button-blue {
+  background-color: $color__blue;
+
+  &:focus,
+  &:hover {
+    background-color: $color__blue_hover;
+  }
+
+  &:active {
+    background-color: $color__blue_active;
+    color: rgba(255,255,255,0.3);
+  }
+}
+
+.button-brown {
+  background-color: $color__brown;
+
+  &:focus,
+  &:hover {
+    background-color: $color__brown_hover;
+  }
+
+  &:active {
+    background-color: $color__brown_active;
+    color: rgba(255,255,255,0.3);
+  }
+}
+
+.input-group {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  + .input-group {
+    margin-top: 29px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 54px;
+  }
+}
+
+.button__calendar_widget {
+  position: absolute;
+  top: 8px;
+  right: 9px;
+}
+
+input {
+  padding: 4px 41px 5px 11px;
+  font: inherit;
+  text-transform: uppercase;
+  line-height: 26px;
+  border: 2px solid #f2f2f2;
+  background-color: #f2f2f2;
+  width: 290px;
+  outline: none;
+
+  &:hover {
+    background-color: #ebebeb;
+    border-color: #ebebeb;
+  }
+
+  &:focus {
+    background-color: transparent;
+    border-color: #e5e5e5;
+  }
+}
+
+// Прячем стандартные кнопки для поля ввода числа
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+}
+input[type=number]{
+  appearance: textfield;
+}
+
+.wrap-input-count {
+  position: relative;
+  display: flex;
+}
+
+.input-count {
+  padding: 0 38px;
+}
+
+.input-count,
+.input-count-decrease,
+.input-count-increase {
+  display: block;
+  width: 38px;
+  height: 38px;
+  text-align: center;
+}
+
+.input-count-decrease,
+.input-count-increase {
+  position: absolute;
+  top: 0;
+  line-height: 38px;
+}
+
+.input-count-decrease {
+  left: 0;
+}
+
+.input-count-increase {
+  right: 0;
+}
+
+// sort-direction иконка,
+.input-count-decrease,
+.input-count-increase,
+.button__calendar_widget {
+  transition: color 0.6s;
+  color: $color__gray;
+
+  &:hover {
+    color: #000;
+  }
+
+  &:active {
+    color: $color__blue;
+  }
+}
+
+.main-footer {
+  padding: 36px 0;
+  display: flex;
+  align-items: center;
+
+  .hash-tag {
+    font-size: 21px;
+  }
+
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+
+    .button-blue {
+      margin: 0;
+      width: 46px;
+      height: 46px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      + .button-blue {
+        margin-left: 6px;
+      }
+    }
+  }
+
+  .footer-copyright {
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-right: 8px;
+    }
+  }
+}
