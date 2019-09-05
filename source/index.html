@@ -88,42 +88,44 @@
         <b class="higth-heading">Заинтересовались?</b>
         <p class="booking-notice">Укажите предполагаемые даты поездки, <br>
           и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <input type="checkbox" id="toggle-booking-form-checkbox" name="toggle-booking-form-checkbox" class="visually-hidden" checked="checked">
-        <label for="toggle-booking-form-checkbox" class="toggle-booking-form button button-brown">Поиск гостиницы в Седоне</label>
-        <form class="booking-form" action="index.html" method="post">
-          <p class="input-group">
-            <label>Дата заезда:</label>
-            <input type="text" name="date-start" value="24 апреля 2017">
-            <svg width="21" height="22" class="button__calendar_widget">
-              <use xlink:href="img/sprite.svg#calendar"></use>
-            </svg>
-          </p>
-          <p class="input-group">
-            <label>Дата выезда:</label>
-            <input type="text" name="date-end" value="5 мая 2017">
-            <svg width="21" height="22" class="button__calendar_widget">
-              <use xlink:href="img/sprite.svg#calendar"></use>
-            </svg>
-          </p>
-          <p class="input-group">
-            <label class="label-adults-count">Взрослые:</label>
-            <span class="wrap-input-count">
-              <span class="input-count-decrease">-</span>
-              <input type="number" name="adults-count" value="2" class="input-count">
-              <span class="input-count-increase">+</span>
-            </span>
-            <label class="label-childrens-count">Дети:</label>
-            <span class="wrap-input-count">
-              <span class="input-count-decrease">-</span>
-              <input type="number" name="childrens-count" value="0" class="input-count">
-              <span class="input-count-increase">+</span>
-            </span>
-          </p>
-          <button type="submit" name="booking-form-submit" class="booking-form-submit button button-blue">Найти</button>
-        </form>
-        <img src="img/map.jpg" alt="Карта гостиниц в Седоне" class="booking-map" width="100%" height="473">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d704736.8095286125!2d-111.92643430522014!3d34.861606205665694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1567205962172!5m2!1sru!2sru"
-          width="100%" height="473" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          <div class="booking__search_wrapper">
+            <input type="checkbox" id="toggle-booking-form-checkbox" name="toggle-booking-form-checkbox" class="visually-hidden" checked="checked">
+            <label for="toggle-booking-form-checkbox" class="toggle-booking-form button button-brown">Поиск гостиницы в Седоне</label>
+            <form class="booking-form" action="index.html" method="post">
+              <p class="input-group">
+                <label>Дата заезда:</label>
+                <input type="text" name="date-start" value="24 апреля 2017">
+                <svg width="21" height="22" class="button__calendar_widget">
+                  <use xlink:href="img/sprite.svg#calendar"></use>
+                </svg>
+              </p>
+              <p class="input-group">
+                <label>Дата выезда:</label>
+                <input type="text" name="date-end" value="5 мая 2017">
+                <svg width="21" height="22" class="button__calendar_widget">
+                  <use xlink:href="img/sprite.svg#calendar"></use>
+                </svg>
+              </p>
+              <p class="input-group">
+                <label class="label-adults-count">Взрослые:</label>
+                <span class="wrap-input-count">
+                  <span class="input-count-decrease">-</span>
+                  <input type="number" name="adults-count" value="2" class="input-count">
+                  <span class="input-count-increase">+</span>
+                </span>
+                <label class="label-childrens-count">Дети:</label>
+                <span class="wrap-input-count">
+                  <span class="input-count-decrease">-</span>
+                  <input type="number" name="childrens-count" value="0" class="input-count">
+                  <span class="input-count-increase">+</span>
+                </span>
+              </p>
+              <button type="submit" name="booking-form-submit" class="booking-form-submit button button-blue">Найти</button>
+            </form>
+            <img src="img/map.jpg" alt="Карта гостиниц в Седоне" class="booking-map" width="100%" height="473">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d704736.8095286125!2d-111.92643430522014!3d34.861606205665694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1567205962172!5m2!1sru!2sru"
+            width="100%" height="473" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          </div>
       </section>
     </main>
     <footer class="main-footer">

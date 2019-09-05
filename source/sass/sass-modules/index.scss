@@ -122,48 +122,82 @@
     }
   }
 
-  .booking-form, > .button {
+  .booking__search_wrapper {
+    overflow: hidden;
+    position: relative;
+    height: 559px;
+
+    img,
+    iframe {
+      display: block;
       position: absolute;
-      width: 568px!important;
-      left: 50%;
-      margin-left: -284px;
+      top: 86px;
+      z-index: -1;
+    }
   }
 
-  .booking-form {
-    padding: 55px;
-    bottom: 78px;
-    height: 395px;
-    font-weight: bold;
-    background-color: #fff;
-    z-index: 5;
-    filter: drop-shadow($const__shadow);
+  #toggle-booking-form-checkbox:checked ~ .booking-form {
+    animation: formshow 1s forwards;
+  }
+
+  #toggle-booking-form-checkbox:not(:checked) ~ .booking-form {
+    animation: formhide 1s forwards;
   }
 
   .button {
-    padding: 14px 45px;
     width: 100%;
+    padding: 14px 45px;
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
   }
 
-  > .button {
-    bottom: 473px;
+  .toggle-booking-form {
+    position: relative;
+    width: 568px;
     padding: 30px 45px;
+    z-index: 2;
   }
 
-  .booking-map,
-  iframe {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 473px;
-    z-index: 3;
+  .booking-form {
+    padding: 55px;
+    margin: 0 auto;
+    bottom: 78px;
+    width: 568px;
+    height: 395px;
+    font-weight: bold;
+    background-color: #fff;
+    z-index: 1;
+    filter: drop-shadow($const__shadow);
   }
-
-  iframe {
-    z-index: 4;
-  }
+  //
+  // .button {
+  //   padding: 14px 45px;
+  //   width: 100%;
+  //   font-size: 21px;
+  //   line-height: 26px;
+  //   font-weight: bold;
+  // }
+  //
+  // > .button {
+  //   bottom: 473px;
+  //   padding: 30px 45px;
+  //   width: 568px;
+  //   padding: 0 auto;
+  // }
+  //
+  // .booking-map,
+  // iframe {
+  //   display: block;
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  //   height: 473px;
+  //   z-index: 3;
+  // }
+  //
+  // iframe {
+  //   z-index: 4;
+  // }
 }

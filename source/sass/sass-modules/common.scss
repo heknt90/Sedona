@@ -300,3 +300,25 @@ input[type=number]{
     }
   }
 }
+
+// Анимации
+@keyframes formshow {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes formhide {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    // transform-origin: top;
+    transform: translateY(-100%);
+  }
+}
