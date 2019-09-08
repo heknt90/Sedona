@@ -95,29 +95,34 @@
               <p class="input-group">
                 <label>Дата заезда:</label>
                 <input type="text" name="date-start" value="24 апреля 2017">
-                <svg width="21" height="22" class="button__calendar_widget">
-                  <use xlink:href="img/sprite.svg#calendar"></use>
-                </svg>
+                <button type="button" name="data-start-calendar" class="button__calendar_widget">
+                  <svg width="21" height="22">
+                    <use xlink:href="img/sprite.svg#calendar"></use>
+                  </svg>
+                </button>
               </p>
               <p class="input-group">
                 <label>Дата выезда:</label>
                 <input type="text" name="date-end" value="5 мая 2017">
-                <svg width="21" height="22" class="button__calendar_widget">
-                  <use xlink:href="img/sprite.svg#calendar"></use>
-                </svg>
+                <button type="button" name="date-end-calendar" class="button__calendar_widget">
+                  <svg width="21" height="22">
+                    <use xlink:href="img/sprite.svg#calendar"></use>
+                  </svg>
+                </button>
               </p>
               <p class="input-group">
                 <label class="label-adults-count">Взрослые:</label>
                 <span class="wrap-input-count">
-                  <span class="input-count-decrease">-</span>
+                  <button type="button" name="adults-count-decrease" class="input-count-decrease">-</button>
                   <input type="number" name="adults-count" value="2" class="input-count">
-                  <span class="input-count-increase">+</span>
+                  <button type="button" name="adults-count-increase" class="input-count-increase">+</button>
                 </span>
                 <label class="label-childrens-count">Дети:</label>
                 <span class="wrap-input-count">
-                  <span class="input-count-decrease">-</span>
+
+                  <button type="button" name="childrens-count-decrease" class="input-count-decrease">-</button>
                   <input type="number" name="childrens-count" value="0" class="input-count">
-                  <span class="input-count-increase">+</span>
+                  <button type="button" name="childrens-count-increase" class="input-count-increase">+</button>
                 </span>
               </p>
               <button type="submit" name="booking-form-submit" class="booking-form-submit button button-blue">Найти</button>

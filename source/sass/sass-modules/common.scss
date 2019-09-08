@@ -120,6 +120,10 @@ a {
   box-sizing: border-box;
 }
 
+button {
+  outline: none;
+}
+
 .button {
   display: block;
   padding: 3px 17px;
@@ -180,6 +184,9 @@ a {
 }
 
 .button__calendar_widget {
+  padding: 0;
+  border: none;
+  background: none;
   position: absolute;
   top: 8px;
   right: 9px;
@@ -236,6 +243,9 @@ input[type=number]{
 
 .input-count-decrease,
 .input-count-increase {
+  padding: 0;
+  border: none;
+  background: none;
   position: absolute;
   top: 0;
   line-height: 38px;
