@@ -89,6 +89,37 @@
           </div>
         </form>
       </section>
+      <section class="sort">
+        <h2 class="visually-hidden">Отсортировать найденные гостиницы</h2>
+        <b class="search__count">Найдено: 3</b>
+        <div class="sort__category">
+          <h3>Сортировка:</h3>
+          <ul>
+            <li>
+              <input type="radio" name="sort-category" id="sort__category_by-price" value="by-price" checked="checked" class="visually-hidden">
+              <label for="sort__category_by-price">По цене</label>
+            </li>
+            <li>
+              <input type="radio" name="sort-category" id="sort__category_by-type" value="by-type" class="visually-hidden">
+              <label for="sort__category_by-type">По типу</label>
+            </li>
+            <li>
+              <input type="radio" name="sort-category" id="sort__category_by-rate" value="by-rate" class="visually-hidden">
+              <label for="sort__category_by-rate">По рейтингу</label>
+            </li>
+          </ul>
+        </div>
+        <div class="sort__direction">
+          <p class="sort__direction_inverse">
+            <input type="radio" name="sort-direction" id="sort-direction-inverse-button" value="inverse" class="visually-hidden">
+            <label for="sort-direction-inverse-button"><span class="visually-hidden">По возрастанию</span></label>
+          </p>
+          <p class="sort__direction_reverse">
+            <input type="radio" name="sort-direction" id="sort-direction-reverse-button" value="reverse" class="visually-hidden">
+            <label for="sort-direction-reverse-button"><span class="visually-hidden">По убыванию</span></label>
+          </p>
+        </div>
+      </section>
     </main>
     <footer class="main-footer">
       <strong class="layout-column hash-tag">#visitsedona</strong>
