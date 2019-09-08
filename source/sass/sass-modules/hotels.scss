@@ -280,3 +280,91 @@
     }
   }
 }
+
+
+.results__list  li {
+  padding: 30px 6%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $color__gray;
+}
+
+.hotel__info {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+
+  .hotel__attributes {
+    position: relative;
+
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
+  .hotel__type {
+    float: left;
+  }
+
+  .hotel__price {
+    position: absolute;
+    left: 115px;
+  }
+
+  .hotel__control {
+
+    .button {
+      float: left;
+
+      + .button {
+        margin-left: 6px;
+      }
+    }
+  }
+}
+
+.hotel__rating {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  .hotel__rating_stars {
+    height: 17px;
+    width: 18px;
+    background-image: url("../img/svg/star.svg");
+    background-repeat: repeat-x;
+
+    &.rating__stars_one {
+      width: 18px;
+    }
+
+    &.rating__stars_two {
+      width: 43px;
+    }
+
+    &.rating__stars_three {
+      width: 68px;
+    }
+
+    &.rating__stars_four {
+      width: 93px;
+    }
+
+    &.rating__stars_five {
+      width: 118px;
+    }
+
+  }
+
+  .hotel__rating_value {
+    display: block;
+    padding: 6px 16px 7px;
+    background-color: #f2f2f2;
+  }
+}

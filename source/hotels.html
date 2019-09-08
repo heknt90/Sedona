@@ -11,7 +11,9 @@
   <div class="container">
     <header class="main-header">
       <nav class="main-navigation">
-        <img src="img/logo.png" alt="Sedona логотип" class="main-logo" width="138" height="70">
+        <a href="/">
+          <img src="img/logo.png" alt="Sedona логотип" class="main-logo" width="138" height="70">
+        </a>
         <ul class="site-navigation__list">
           <li><a href="info.html">Информация</a></li>
           <li><a href="gallery.html">Фото и видео</a></li>
@@ -115,10 +117,68 @@
             <label for="sort-direction-inverse-button"><span class="visually-hidden">По возрастанию</span></label>
           </p>
           <p class="sort__direction_reverse">
-            <input type="radio" name="sort-direction" id="sort-direction-reverse-button" value="reverse" class="visually-hidden">
+            <input type="radio" name="sort-direction" id="sort-direction-reverse-button" value="reverse" class="visually-hidden" checked="checked">
             <label for="sort-direction-reverse-button"><span class="visually-hidden">По убыванию</span></label>
           </p>
         </div>
+      </section>
+      <section class="results">
+        <ul class="results__list">
+          <li>
+            <img src="img/hotel-1.jpg" alt="" class="hotel__cover">
+            <div class="hotel__info">
+              <h4 class="hotel__title">Amara Resort & Spa</h4>
+              <p class="hotel__attributes">
+                <span class="hotel__type">Гостиница</span>
+                <span class="hotel__price">от 4000 Р.</span>
+              </p>
+              <div class="hotel__control">
+                <a href="hotel-1.html" class="button button-blue">Подробнее</a>
+                <a href="get-booking.php&id=1" class="button button-brown">Забронировать</a>
+              </div>
+            </div>
+            <div class="hotel__rating">
+              <div class="hotel__rating_stars rating__stars_four"></div>
+              <span class="hotel__rating_value">Рейтинг: 8,5</span>
+            </div>
+          </li>
+          <li>
+            <img src="img/hotel-2.jpg" alt="" class="hotel__cover">
+            <div class="hotel__info">
+              <h4 class="hotel__title">Desert Quail Inn</h4>
+              <p class="hotel__attributes">
+                <span class="hotel__type">Мотель</span>
+                <span class="hotel__price">от 3000 Р.</span>
+              </p>
+              <div class="hotel__control">
+                <a href="hotel-2.html" class="button button-blue">Подробнее</a>
+                <a href="get-booking.php&id=1" class="button button-brown">Забронировать</a>
+              </div>
+            </div>
+            <div class="hotel__rating">
+              <div class="hotel__rating_stars rating__stars_three"></div>
+              <span class="hotel__rating_value">Рейтинг: 8,9</span>
+            </div>
+          </li>
+          <li>
+            <img src="img/hotel-3.jpg" alt="" class="hotel__cover">
+            <div class="hotel__info">
+              <h4 class="hotel__title">Villas at Poco Diablo</h4>
+              <p class="hotel__attributes">
+                <span class="hotel__type">Аппартаменты</span>
+                <span class="hotel__price">от 2000 Р.</span>
+              </p>
+              <div class="hotel__control">
+                <a href="hotel-3.html" class="button button-blue">Подробнее</a>
+                <a href="get-booking.php&id=1" class="button button-brown">Забронировать</a>
+              </div>
+            </div>
+            <div class="hotel__rating">
+              <div class="hotel__rating_stars rating__stars_two"></div>
+              <span class="hotel__rating_value">Рейтинг: 9,2</span>
+            </div>
+          </li>
+        </ul>
       </section>
     </main>
     <footer class="main-footer">
