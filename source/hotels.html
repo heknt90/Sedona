@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Поиск отелей | Sedona</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <!-- <script src="js/script.js" type="text/javascript"></script> -->
+</head>
+<body>
+  <div class="container">
+    <header class="main-header">
+      <nav class="main-navigation">
+        <img src="img/logo.png" alt="Sedona логотип" class="main-logo" width="138" height="70">
+        <ul class="site-navigation__list">
+          <li><a href="info.html">Информация</a></li>
+          <li><a href="gallery.html">Фото и видео</a></li>
+          <li class="current-page">Гостиницы</li>
+          <li><a href="index.html#map">Карта штата</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="visually-hidden">Список отелей</h1>
+      <section class="filters">
+        <h2 class="visually-hidden">Фильтры отображения гостиниц</h2>
+
+        <form action="index.html" class="filters-form">
+          <fieldset class="filter-group">
+            <legend class="filter-header">Инфраструктура:</legend>
+            <ul>
+              <li class="filter-checkbox__item">
+                <input type="checkbox" name="infrostructure" value="pool" id="filter-checkbox__infrostructure_pool" class="visually-hidden" checked="checked">
+
+                <label for="filter-checkbox__infrostructure_pool">Басcейн</label>
+              </li>
+              <li class="filter-checkbox__item">
+                <input type="checkbox" name="infrostructure" value="parking" id="filter-checkbox__infrostructure_parking" class="visually-hidden">
+                <label for="filter-checkbox__infrostructure_parking">Парковка</label>
+              </li>
+              <li class="filter-checkbox__item">
+                <input type="checkbox" name="infrostructure" value="wifi" id="filter-checkbox__infrostructure_wifi" class="visually-hidden">
+                <label for="filter-checkbox__infrostructure_wifi">Wi-fi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter-group">
+            <legend class="filter-header">Тип жилья:</legend>
+
+            <ul>
+              <li class="filter-checkbox__item">
+                <input type="checkbox" name="type" value="hotel" id="filter-checkbox__type_hotel" class="visually-hidden" checked="checked">
+
+                <label for="filter-checkbox__type_hotel">Гостиница</label>
+              </li>
+              <li class="filter-checkbox__item">
+                <input type="checkbox" name="type" value="motel" id="filter-checkbox__type_motel" class="visually-hidden" checked="checked">
+                <label for="filter-checkbox__type_motel">Мотель</label>
+              </li>
+              <li class="filter-checkbox__item">
+                <input type="checkbox" name="type" value="apartments" id="filter-checkbox__type_apartments" class="visually-hidden" checked="checked">
+                <label for="filter-checkbox__type_apartments">Аппартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <div class="filter-group">
+            <fieldset>
+              <legend class="filter-header">Стоимость в сутки (Р):</legend>
+              <div class="filter-price">
+                <div class="filter-price-double-input">
+                  <p class="filter-price__input_min filter-price__input">
+                    <input type="number" name="filter-price__input_min" value="0" min="0" max="5000">
+                  </p>
+                  <p class="filter-price__input_max filter-price__input">
+                    <input type="number" name="filter-price__input_max" value="3000" min="0" max="5000">
+                  </p>
+                </div>
+                <div class="filter-price-indicator">
+                  <div class="filter-price-selected">
+                    <span class="filter-page__control_min"></span>
+                    <span class="filter-page__control_max"></span>
+                  </div>
+                </div>
+              </div>
+
+            </fieldset>
+
+            <button type="submit" name="button" class="button button-filter-submit">Показать</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <strong class="layout-column hash-tag">#visitsedona</strong>
+      <ul class="layout-column  social-buttons">
+        <li class="button button-blue">
+          <a href="twitter.com">
+            <span class="visually-hidden">twitter</span>
+            <svg width="17" height="15">
+              <use xlink:href="img/sprite.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="button button-blue">
+          <a href="facebook.com">
+            <span class="visually-hidden">facebook</span>
+            <svg width="12" height="22">
+              <use xlink:href="img/sprite.svg#fb-icon"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="button button-blue">
+          <a href="youtube.com">
+            <span class="visually-hidden">youtube</span>
+            <svg width="20" height="16" >
+              <use xlink:href="img/sprite.svg#youtube"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <div class="layout-column footer-copyright">
+        <span>website by</span>
+        <a href="https://htmlacademy.ru/intensive/htmlcss">
+          <svg width="115" height="41">
+            <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+          </svg>
+        </a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

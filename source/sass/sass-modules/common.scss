@@ -92,7 +92,7 @@ a {
 
 .footer-copyright a,
 .hotel-title,
-.site-navigation__list li {
+.site-navigation__list li a {
   color: #000;
   transition: color 0.6s;
 
@@ -318,7 +318,6 @@ input[type=number]{
     transform: translateY(0);
   }
   to {
-    // transform-origin: top;
     transform: translateY(-100%);
   }
 }
