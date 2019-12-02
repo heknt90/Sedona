@@ -5,22 +5,29 @@ var gulp = require('gulp'),
     del = require('del'),
     rename = require('gulp-rename'),
     postcss = require('gulp-postcss'),
+    // uncss = require('gulp-uncss'),
     autoprefixer = require('autoprefixer'),
 	  minify = require('gulp-csso'),
     server = require('browser-sync').create(),
     rename = require('gulp-rename'),
     imagemin = require('gulp-imagemin'),
     svgstore = require('gulp-svgstore'),
-    uglify = require('gulp-uglify'),
+    uglify = require('gulp-uglify-es').default,
     pump = require("pump");
 
 gulp.task('style', function() {
   return gulp.src('source/sass/style.scss')
       .pipe(plumber())
       .pipe(sass())
+      // .pipe(uncss({
+      //   html: ['source/*.html']
+      // }))
       .pipe(postcss([
         require('css-mqpacker')({sort: true}),
-        autoprefixer
+        autoprefixer(
+          ['last 2 versions', 'ie 11'],
+          {grid: true}
+        )
       ]))
       .pipe(gulp.dest('build/css'))
       .pipe(minify())
@@ -40,7 +47,7 @@ gulp.task('images', function () {
 });
 
 gulp.task('sprite', function () {
-  return gulp.src('source/img/svg/*.svg')
+  return gulp.src('source/sprite/*.svg')
     .pipe(svgstore({
       inlineSvg: true
     }))
@@ -91,8 +98,7 @@ gulp.task('serve', gulp.series(function () {
     },
     notify: false,
     host: 'localhost',
-    port: 3000,
-    browser: "chrome"
+    port: 3000
   });
   gulp.watch('source/sass/**/*.scss', gulp.series('style'));
   gulp.watch('source/*.html', gulp.series('html'));
