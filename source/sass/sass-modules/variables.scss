@@ -1,3 +1,9 @@
+@mixin font_main () {
+    font-family: "PT Sans", Arial, sans-serif;
+    text-transform: uppercase;
+    color: #000;
+}  
+
 $color__blue: #81b3d2;
 $color__blue_hover: #669ec0;
 $color__blue_active: #5496bd;
