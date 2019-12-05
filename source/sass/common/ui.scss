@@ -1,0 +1,92 @@
+.button {
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    font-size: 21px;
+    line-height: 26px;
+    box-sizing: border-box;
+
+    &:active {
+        color: rgba(#fff, .3);
+    }
+
+    &_size_md {
+        padding: 17px;
+        height: 58px;
+    }
+
+    &_size_lg {
+        padding: 33px;
+        height: 86px;
+    }
+
+    &_color_brown {
+        background-color: $color_brown;
+
+        &:hover {
+            background-color: $color_brown_hover;
+        }
+        
+        &:active {
+            background-color: $color_brown_active;
+        }
+
+    }
+    &_color_blue {
+        background-color: $color_blue;
+
+        &:hover {
+            background-color: $color_blue_hover;
+        }
+        
+        &:active {
+            background-color: $color_blue_active;
+        }
+        
+        &_active {
+            
+        }
+    }
+
+    &__calendar {
+        position: absolute;
+        right: -340px;
+        top: 1px;
+        background: none;
+        border: none;
+        outline: none;
+    }
+}
+
+.input-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    & + & {
+        margin-top: 30px;
+    }
+}
+
+.input {
+    cursor: pointer;
+}
+
+.button__calendar,
+.count-decrease,
+.count-increase {
+    cursor: pointer;
+    padding: 0;
+    color: #cacaca;
+
+    &:hover {
+        color: #000;
+    }
+    
+    &:active {
+        color:#81b3d2;
+    }
+}

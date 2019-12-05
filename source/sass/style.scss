@@ -2,9 +2,12 @@
 @import './common/fonts.scss';
 @import './common/variables.scss';
 @import './common/common.scss';
+@import './common/ui.scss';
+
 @import './modules/header.scss';
 @import './modules/footer.scss';
-@import './modules/modals.scss';
 
 @import './index/adventages.scss';
 @import './index/order.scss';
+
+@import './modules/modals.scss';
