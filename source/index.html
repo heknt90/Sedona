@@ -22,168 +22,129 @@
       <img class="header-promo__tagline" src="img/welcome.png" alt="Welcome to gorgeous Sedona Because the Grand Canyon ">
     </div>
   </header>
-  <!-- <div class="container">
-    <header class="main-header">
-      <nav class="main-navigation">
-        <img src="img/logo.png" alt="Sedona логотип" class="main-logo" width="138" height="70">
-        <ul class="site-navigation__list">
-          <li><a href="info.html">Информация</a></li>
-          <li><a href="gallery.html">Фото и видео</a></li>
-          <li><a href="hotels.html">Гостиницы</a></li>
-          <li><a href="index.html#map">Карта штата</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <h1 class="visually-hidden">Седона - тихий, но красивый городок. Мечта для туристов.</h1>
-      <section class="promo">
-        <img src="img/welcome.png" alt="Welcome to the gorgeous Sedona, becouse the Grans Canyon sucks!" width="458" height="352">
-      </section>
-      <section class="adventages">
-        <h2>Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</h2>
-        <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-        <ul class="adventages__list">
-          <li class="adventage-item_extended">
-            <div class="adventage-content layout-column">
-              <h3>Настоящий<br> городок</h3>
-              <span class="adventage-number">- №1 -</span>
-              <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
-              <ul class="adventage-sublist">
-                <li class="icon-home layout-column">
-                  <svg width="76" height="76" class="adventage-sublist__icon">
-                    <use xlink:href="img/sprite.svg#icon-1"></use>
-                  </svg>
-                  <h4>Жилье</h4>
-                  <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-                </li>
-                <li class="icon-foot layout-column">
-                  <svg width="76" height="76" class="adventage-sublist__icon">
-                    <use xlink:href="img/sprite.svg#icon-2"></use>
-                  </svg>
-                  <h4>Еда</h4>
-                  <p>Всегда заказывайте фирменный бургер. Вы не разочаруетесь!</p>
-                </li>
-                <li class="icon-gift layout-column">
-                  <svg width="76" height="76" class="adventage-sublist__icon">
-                    <use xlink:href="img/sprite.svg#icon-3"></use>
-                  </svg>
-                  <h4>Сувениры</h4>
-                  <p>Не только китайского, но и местного производства!</p>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="adventage-item_extended">
-            <div class="adventage-content layout-column">
-              <h3>Там есть<br> мост дьявола</h3>
-              <span class="adventage-number">- №2 -</span>
-              <p>Да, по нему можно пройти! <br>Если конечно вы осмелитесь</p>
-            </div>
-          </li>
-          <li class="layout-column">
-            <h3>Небольшая<br> площадь</h3>
-            <span class="adventage-number">- №3 -</span>
-            <p>Все достопримечательности находятся очень близко</p>
-          </li>
-          <li class="layout-column">
-            <h3>Красивая<br> дорога</h3>
-            <span class="adventage-number">- №4 -</span>
-            <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-          </li>
-          <li class="layout-column">
-            <h3>Мало<br> туристов</h3>
-            <span class="adventage-number">- №5 -</span>
-            <p>Большинство едет в Гранд Каньон и толпится там</p>
-          </li>
-        </ul>
-      </section>
-      <section class="booking-hotel">
-        <h2 class="visually-hidden">Забронировать отель</h2>
-        <b class="higth-heading">Заинтересовались?</b>
-        <p class="booking-notice">Укажите предполагаемые даты поездки, <br>
-          и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <div class="booking__search_wrapper">
-            <input type="checkbox" id="toggle-booking-form-checkbox" name="toggle-booking-form-checkbox" class="visually-hidden">
-            <label for="toggle-booking-form-checkbox" class="toggle-booking-form button button-brown">Поиск гостиницы в Седоне</label>
-            <form class="booking-form" action="index.html" method="post">
-              <p class="input-group">
-                <label>Дата заезда:</label>
-                <input type="text" name="date-start" value="24 апреля 2017">
-                <button type="button" name="data-start-calendar" class="button__calendar_widget">
-                  <svg width="21" height="22">
-                    <use xlink:href="img/sprite.svg#calendar"></use>
-                  </svg>
-                </button>
-              </p>
-              <p class="input-group">
-                <label>Дата выезда:</label>
-                <input type="text" name="date-end" value="5 мая 2017">
-                <button type="button" name="date-end-calendar" class="button__calendar_widget">
-                  <svg width="21" height="22">
-                    <use xlink:href="img/sprite.svg#calendar"></use>
-                  </svg>
-                </button>
-              </p>
-              <p class="input-group">
-                <label class="label-adults-count">Взрослые:</label>
-                <span class="wrap-input-count">
-                  <button type="button" name="adults-count-decrease" class="input-count-decrease">-</button>
-                  <input type="number" name="adults-count" value="2" class="input-count">
-                  <button type="button" name="adults-count-increase" class="input-count-increase">+</button>
-                </span>
-                <label class="label-childrens-count">Дети:</label>
-                <span class="wrap-input-count">
-
-                  <button type="button" name="childrens-count-decrease" class="input-count-decrease">-</button>
-                  <input type="number" name="childrens-count" value="0" class="input-count">
-                  <button type="button" name="childrens-count-increase" class="input-count-increase">+</button>
-                </span>
-              </p>
-              <button type="submit" name="booking-form-submit" class="booking-form-submit button button-blue">Найти</button>
-            </form>
-            <img src="img/map.jpg" alt="Карта гостиниц в Седоне" class="booking-map" width="100%" height="473">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d704736.8095286125!2d-111.92643430522014!3d34.861606205665694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1567205962172!5m2!1sru!2sru"
-            width="100%" height="473" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+  <main>
+    <section class="adventages">
+      <h2 class="visually-hidden">Особенности Седоны</h2>
+      <b class="adventages__occasion">Седона - небольшой городок в Аризоне,<br/> заслуживающий большего!</b>
+      <p class="adventages__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+      <ul class="adventages__list">
+        <li class="adventages__item adventages__item_contents">
+          <div class="adventages__card">
+            <h4 class="adventages__item-title">Настоящий городок</h4>
+            <span class="adventages__order">№ 1</span>
+            <p class="adventages__item-text">Седона - не аттракцион для туристов, там течет настоящая жизнь</p>
           </div>
-      </section>
-    </main>
-    <footer class="main-footer">
-      <strong class="layout-column hash-tag">#visitsedona</strong>
-      <ul class="layout-column  social-buttons">
-        <li class="button button-blue">
-          <a href="twitter.com">
-            <span class="visually-hidden">twitter</span>
-            <svg width="17" height="15">
-              <use xlink:href="img/sprite.svg#twitter"></use>
-            </svg>
-          </a>
+          <img class="adventages__item-promo" src="img/adventage_1.jpg" alt="Все по-настоящему">
+          <ul class="adventages__sublist">
+            <li class="adventages__subitem">
+              <svg width='75' height='72' class='adventages__icon' role='img'>
+                <title>Удобные аппартаменты</title>
+                <use xlink:href='img/sprite.svg#icon-1'></use>
+              </svg>
+              <h4 class="adventages__item-title">Жилье</h4>
+              <p class="adventages__item-text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+            </li>
+            <li class="adventages__subitem">
+              <svg width='74' height='70' class='adventages__icon' role='img'>
+                <title>Наш фирменный бургер</title>
+                <use xlink:href='img/sprite.svg#icon-2'></use>
+              </svg>
+              <h4 class="adventages__item-title">Еда</h4>
+              <p class="adventages__item-text">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР,
+                Вы не разочаруетесь!</p>
+            </li>
+            <li class="adventages__subitem">
+                <svg width='64' height='76' class='adventages__icon' role='img'>
+                  <title>Огромный выбор сувениров</title>
+                  <use xlink:href='img/sprite.svg#icon-3'></use>
+                </svg>
+                <h4 class="adventages__item-title">Сувениры</h4>
+                <p class="adventages__item-text">Не только китайского, но и местного производства!</p>
+            </li>
+          </ul>
         </li>
-        <li class="button button-blue">
-          <a href="facebook.com">
-            <span class="visually-hidden">facebook</span>
-            <svg width="12" height="22">
-              <use xlink:href="img/sprite.svg#fb-icon"></use>
-            </svg>
-          </a>
+        <li class="adventages__item">
+          <img class="adventages__item-promo" src="img/adventage_2.jpg" alt="Настоящий аттракцион">
+          <div class="adventages__card">
+            <h4 class="adventages__item-title">Там есть мост дьявола</h4>
+            <span class="adventages__order">№ 2</span>
+            <p class="adventages__item-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+          </div>
         </li>
-        <li class="button button-blue">
-          <a href="youtube.com">
-            <span class="visually-hidden">youtube</span>
-            <svg width="20" height="16" >
-              <use xlink:href="img/sprite.svg#youtube"></use>
-            </svg>
-          </a>
+        <li class="adventages__item adventages__item_short">
+          <h4 class="adventages__item-title">Небольшая <br>площадь</h4>
+          <span class="adventages__order">№ 3</span>
+          <p>Все достопримеча-тельности находятся очень близко</p>
+        </li>
+        <li class="adventages__item adventages__item_short">
+            <h4 class="adventages__item-title">Красивая<br> дорога</h4>
+            <span class="adventages__order">№ 4</span>
+            <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        </li>
+        <li class="adventages__item adventages__item_short">
+            <h4 class="adventages__item-title">Мало<br> туристов</h4>
+            <span class="adventages__order">№ 5</span>
+            <p>Большинство едет в Гранд Каньон и толпится там</p>
         </li>
       </ul>
-      <div class="layout-column footer-copyright">
-        <span>website by</span>
-        <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <svg width="115" height="41">
-            <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
-          </svg>
-        </a>
-      </div>
-    </footer>
-  </div> -->
+    </section>
+    <section class="order">
+      Заинтересовались?
+      <p class="order__details">
+          Укажите предполагаемые даты поездки, 
+          и мы покажем вам лучшие предложения гостиниц в седоне
+      </p>
+      <button type="button" class="order__toggle-form">
+        Поиск гостиницы в Седоне
+      </button>
+      <form action="echo.htmlacademy.ru" method="GET">
+        <label for='order-input-entry-date'>Дата заезда:</label>
+        <input type='text' name='order-input-entry-date' id='order-input-entry-date' class='order__input-entry-date'>
+        <label for='order-input-leave-date'>Дата выезда:</label>
+        <input type='text' name='order-input-leave-date' id='order-input-leave-date' class='order__input-leave-date'>
+        <label for='order-num-places-adults'>Взрослые:</label>
+        <input type='text' name='order-num-places-childs' id='order-num-places-childs' class='order__num-places-childs'>
+        <label for='order-num-places-childs'>Дети:</label>
+        <input type='text' name='order-num-places-adults' id='order-num-places-adults' class='order__num-places-adults'>
+        <button type="submit" class="order__submit">Найти</button>
+      </form>
+    </section>
+    <section class="map">
+      <img class="map__picture" src="img/map.jpg" alt="Мы здесь">
+    </section>
+  </main>
+  <footer class="main-footer">
+    <b class="main-footer__hashtag">#visitsedona</b>
+    <ul class="main-footer__social social__list">
+      <li class="social__link">
+        <svg width='17' height='15' class='social__icon' role='img'>
+          <title>Twitter link</title>
+          <use xlink:href='img/sprite.svg#twitter'></use>
+        </svg>
+      </li>
+      <li class="social__link">
+        <svg width='12' height='22' class='social__icon' role='img'>
+          <title>Facebook link</title>
+          <use xlink:href='img/sprite.svg#fb-icon'></use>
+        </svg>
+      </li>
+      <li class="social__link">
+        <svg width='20' height='16' class='social__icon' role='img'>
+          <title>Youtube link</title>
+          <use xlink:href='img/sprite.svg#youtube'></use>
+        </svg>
+      </li>
+    </ul>
+    <div class="main-footer__copyright">
+      <span>Website by</span>
+      <svg width='115' height='41' class='main-footer__copyright-icon' role='img'>
+        <title>Html Academy link</title>
+        <use xlink:href='img/sprite.svg#logo-htmlacademy'></use>
+      </svg>
+    </div>
+  </footer>
+ 
+
+
 </body>
 </html>

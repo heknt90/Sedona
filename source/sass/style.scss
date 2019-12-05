@@ -1,5 +1,9 @@
-@import 'sass-modules/fonts.scss';
-@import 'sass-modules/variables.scss';
-@import 'sass-modules/common.scss';
-@import 'sass-modules/index.scss';
-// @import 'sass-modules/hotels.scss';
+
+@import './common/fonts.scss';
+@import './common/variables.scss';
+@import './common/common.scss';
+@import './modules/header.scss';
+@import './modules/footer.scss';
+@import './modules/modals.scss';
+
+@import './index/adventages.scss';
