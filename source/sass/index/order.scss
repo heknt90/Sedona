@@ -1,0 +1,19 @@
+.order {
+
+    &__form {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+        padding: 55px;
+        width: 568px;
+        height: 395px;
+        font-size: 14px;
+        line-height: 26px;
+        font-weight: 700;
+        box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+        // border: 1px solid red;
+        background-color: #fff;
+        z-index: 1;
+    }
+}

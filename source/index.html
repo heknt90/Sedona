@@ -97,15 +97,21 @@
       <button type="button" class="order__toggle-form">
         Поиск гостиницы в Седоне
       </button>
-      <form action="echo.htmlacademy.ru" method="GET">
-        <label for='order-input-entry-date'>Дата заезда:</label>
-        <input type='text' name='order-input-entry-date' id='order-input-entry-date' class='order__input-entry-date'>
-        <label for='order-input-leave-date'>Дата выезда:</label>
-        <input type='text' name='order-input-leave-date' id='order-input-leave-date' class='order__input-leave-date'>
-        <label for='order-num-places-adults'>Взрослые:</label>
-        <input type='text' name='order-num-places-childs' id='order-num-places-childs' class='order__num-places-childs'>
-        <label for='order-num-places-childs'>Дети:</label>
-        <input type='text' name='order-num-places-adults' id='order-num-places-adults' class='order__num-places-adults'>
+      <form class="order__form" action="echo.htmlacademy.ru" method="GET">
+        <p class="input-group">
+          <label for='order-input-entry-date'>Дата заезда:</label>
+          <input type='text' name='order-input-entry-date' id='order-input-entry-date' class='order__input-entry-date'>
+        </p>
+        <p class="input-group">
+          <label for='order-input-leave-date'>Дата выезда:</label>
+          <input type='text' name='order-input-leave-date' id='order-input-leave-date' class='order__input-leave-date'>
+        </p>
+        <p class="input-group">
+          <label for='order-num-places-adults'>Взрослые:</label>
+          <input type='text' name='order-num-places-childs' id='order-num-places-childs' class='order__num-places-childs'>
+          <label for='order-num-places-childs'>Дети:</label>
+          <input type='text' name='order-num-places-adults' id='order-num-places-adults' class='order__num-places-adults'>
+        </p>
         <button type="submit" class="order__submit">Найти</button>
       </form>
     </section>
