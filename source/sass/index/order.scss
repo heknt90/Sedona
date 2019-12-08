@@ -64,7 +64,17 @@
         padding: 12px;
         padding-right: 55px;
         text-transform: uppercase;
+        box-sizing: border-box;
         font: inherit;
+
+        &:hover {
+            background-color: #ebebeb;
+        }
+        
+        &:active {
+            border: solid 2px #e5e5e5;
+            background-color: transparent;
+        }
     }
     
     .order__input-count,
