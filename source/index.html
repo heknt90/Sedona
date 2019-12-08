@@ -35,14 +35,18 @@
               <span class="adventages__order">№ 1</span>
               <p class="adventages__item-text">Седона - не аттракцион для туристов, там течет настоящая жизнь</p>
             </div>
-            <img class="adventages__item-promo" src="img/adventage_1.jpg" alt="Все по-настоящему">
+            <div class="adventages__item-promo">
+              <div class="adventages__item-promo-inner">
+                <img class="adventages__banner" src="img/adventage_1.jpg" alt="Все по-настоящему">
+              </div>
+            </div>
             <ul class="adventages__sublist">
               <li class="adventages__subitem">
                 <svg width='75' height='72' class='adventages__icon' role='img'>
                   <title>Удобные аппартаменты</title>
                   <use xlink:href='img/sprite.svg#icon-1'></use>
                 </svg>
-                <h4 class="adventages__item-title">Жилье</h4>
+                <h4 class="adventages__item-title adventages__subitem-title">Жилье</h4>
                 <p class="adventages__item-text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
               </li>
               <li class="adventages__subitem">
@@ -50,7 +54,7 @@
                   <title>Наш фирменный бургер</title>
                   <use xlink:href='img/sprite.svg#icon-2'></use>
                 </svg>
-                <h4 class="adventages__item-title">Еда</h4>
+                <h4 class="adventages__item-title adventages__subitem-title">Еда</h4>
                 <p class="adventages__item-text">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР,
                   Вы не разочаруетесь!</p>
               </li>
@@ -59,13 +63,17 @@
                     <title>Огромный выбор сувениров</title>
                     <use xlink:href='img/sprite.svg#icon-3'></use>
                   </svg>
-                  <h4 class="adventages__item-title">Сувениры</h4>
+                  <h4 class="adventages__item-title adventages__subitem-title">Сувениры</h4>
                   <p class="adventages__item-text">Не только китайского, но и местного производства!</p>
               </li>
             </ul>
           </li>
           <li class="adventages__item">
-            <img class="adventages__item-promo" src="img/adventage_2.jpg" alt="Настоящий аттракцион">
+            <div class="adventages__item-promo">
+                <div class="adventages__item-promo-inner">
+                  <img class="adventages__banner" src="img/adventage_2.jpg" alt="            <!-- <img class="adventages__item-promo" src="img/adventage_2.jpg" alt="">
+                </div>
+              </div>
             <div class="adventages__card">
               <h4 class="adventages__item-title">Там есть мост дьявола</h4>
               <span class="adventages__order">№ 2</span>
@@ -100,7 +108,7 @@
           Поиск гостиницы в Седоне
         </button>
         <div class="order__form-wrap">
-          <form id="order-form-popup" class="order__form order__form_hidden" action="echo.htmlacademy.ru" method="GET">
+          <form id="order-form-popup" class="order__form" action="echo.htmlacademy.ru" method="GET">
             <p class="input-group">
               <label class="order__label order__label-date" for='order-input-entry-date'>Дата заезда:
                 <button class="button__calendar">
