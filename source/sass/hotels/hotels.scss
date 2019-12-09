@@ -1,0 +1,100 @@
+.hotels-results {
+
+    &__item {
+        display: flex;
+        justify-content: space-between;;
+    }
+    
+}
+
+.hotel {
+    padding: 30px 46px;
+    border-bottom: 1px solid #e5e5e5;
+
+    &__cover {
+        margin-right: 31px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__name {
+        margin-bottom: 8px;
+
+        &:hover {
+            color: $color_blue;
+        }
+        
+        &:active {
+            color: rgba(0,0,0,.3);
+        }
+    }
+
+    &__type,
+    &__price {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    &__type {
+        display: inline-block;
+        text-align: left;
+        width: 110px;
+    }
+
+    &__actions {
+        display: flex;
+        margin-top: 14px;
+    }
+
+    &__button {
+
+        + .hotel__button {
+            margin-left: 6px;
+        }
+    }
+
+    &-rating {
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        &__stars-value {
+            height: 17px;
+            background-image: url('./../../img/star.svg');
+            background-repeat: repeat-x;
+            align-self: flex-end;
+
+            &_1 {
+                width: 17px;
+            }
+
+            &_2 {
+                width: 41px;
+            }
+
+            &_3 {
+                width: 65px;
+            }
+
+            &_4 {
+                width: 89px;
+            }
+
+            &_5 {
+                width: 113px;
+            }
+        }
+
+        &__text-rating {
+            display: block;
+            padding: 3px 16px;
+            background-color: #f2f2f2;
+        }
+    }
+}
