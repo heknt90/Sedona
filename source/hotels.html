@@ -98,33 +98,33 @@
           <section class="hotels-sort">
             <h2 class="visually-hidden">Параметры сортировки списка отелей</h2>
 
-            <span class="hotels-sort__resuts-count">Найдено: 3</span>
+            <span class="hotels-sort__results-count">Найдено: 3</span>
 
             <section class="hotels-sort__method">
               <h3 class="hotels-sort__title">Сортировка:</h3>
-              <ul class="hotels-sort__type-list">
+              <ul class="hotels-sort__type-list hotels-sort__list">
                 <li class="hotels-sort__type-item">
-                  <input type='checkbox' name='hotels-sort__type' id='hotels-sort-type-by-price' class='visually-hidden hotels-sort__checkbox'>
+                  <input type='radio' name='hotels-sort__type' id='hotels-sort-type-by-price' class='visually-hidden hotels-sort__type-checkbox' checked>
                   <label for='hotels-sort-type-by-price' class="hotels-sort__label">По цене</label>
                 </li>
                 <li class="hotels-sort__type-item">
-                  <input type='checkbox' name='hotels-sort__type' id='hotels-sort-type-by-type' class='visually-hidden hotels-sort__checkbox'>
+                  <input type='radio' name='hotels-sort__type' id='hotels-sort-type-by-type' class='visually-hidden hotels-sort__type-checkbox'>
                   <label for='hotels-sort-type-by-type' class="hotels-sort__label">По типу</label>
                 </li>
                 <li class="hotels-sort__type-item">
-                  <input type='checkbox' name='hotels-sort__type' id='hotels-sort-type-by-rate' class='visually-hidden hotels-sort__checkbox'>
+                  <input type='radio' name='hotels-sort__type' id='hotels-sort-type-by-rate' class='visually-hidden hotels-sort__type-checkbox'>
                   <label for='hotels-sort-type-by-rate' class="hotels-sort__label">По рейтингу</label>
                 </li>
               </ul>
 
-              <ul class="hotels-sort__order-list">
+              <ul class="hotels-sort__order-list hotels-sort__list">
                 <li class="hotels-sort__order-item">
-                  <input type='checkbox' name='hotels-sort__order' id='hotels-sort-order-increase' class='visually-hidden hotels-sort__checkbox'>
-                  <label for='hotels-sort-order-increase' class="hotels-sort__label"><span class="visually-hidden">По возрастанию</span><span class="hotels-sort__order-indicator_increase"></span></label>
+                  <input type='radio' checked name='hotels-sort__order' id='hotels-sort-order-increase' class='visually-hidden hotels-sort__order-checkbox'>
+                  <label for='hotels-sort-order-increase' class="hotels-sort__label"><span class="visually-hidden">По возрастанию</span><span class="hotels-sort__order-indicator hotels-sort__order-indicator_increase"></span></label>
                 </li>
                 <li class="hotels-sort__order-item">
-                  <input type='checkbox' name='hotels-sort__order' id='hotels-sort-order-decrease' class='visually-hidden hotels-sort__checkbox'>
-                  <label for='hotels-sort-order-decrease' class="hotels-sort__label"><span class="visually-hidden">По убыванию</span><span class="hotels-sort__order-indicator_decrease"></span></label>
+                  <input type='radio' name='hotels-sort__order' id='hotels-sort-order-decrease' class='visually-hidden hotels-sort__order-checkbox'>
+                  <label for='hotels-sort-order-decrease' class="hotels-sort__label"><span class="visually-hidden">По убыванию</span><span class="hotels-sort__order-indicator hotels-sort__order-indicator_decrease"></span></label>
                 </li>
               </ul>
             </section>

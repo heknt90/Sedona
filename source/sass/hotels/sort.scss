@@ -1,0 +1,95 @@
+.hotels-sort {
+    display: flex;
+    padding: 31px 46px 33px;
+
+    &__results-count {
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 26px;
+    }
+
+    &__method {
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 49px;
+        font-size: 12px;
+        line-height: 18px;
+        color: rgba(0,0,0,.3);
+    }
+
+    &__title {
+        font: inherit;
+        color: #000;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__order-list {
+        margin-left: auto;
+    }
+
+    &__type-item {
+        margin-left: 33px;
+
+        .hotels-sort__label {
+            display: block;
+            border-bottom: 2px dotted $color_blue;
+
+            &:hover {
+                color: $color_blue_hover;
+            }
+            
+            &:active {
+                border: none;
+                color: #000;
+            }
+        }
+
+    }
+
+    &__type-checkbox:checked + &__label {
+        color: $color_blue;
+        border: none;
+    }
+
+    &__order-indicator {
+        display: block;
+        width: 10px;
+        height: 11px;
+        background-color: #cacaca;
+
+        &:hover {
+            background-color: #000;
+        }
+        
+        &:active {
+            background-color: $color_blue;
+        }
+
+        &_increase {
+            clip-path: polygon(
+                50% 0%,
+                100% 100%,
+                0% 100%
+            );
+        }
+
+        &_decrease {
+            clip-path: polygon(
+                0% 0%,
+                100% 0%,
+                50% 100%
+            );
+            margin-left: 12px;
+        }
+    }
+    
+    &__order-checkbox:checked + &__label > &__order-indicator {
+        // border: 1px solid red;
+        background-color: $color_blue;
+    }
+}
