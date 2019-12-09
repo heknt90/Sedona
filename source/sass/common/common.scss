@@ -16,6 +16,12 @@ h1, h2, h3, h4, h5, p {
     margin: 0;
 }
 
+fieldset {
+    margin: 0;
+    padding: 0;
+    border:none;
+}
+
 .visually-hidden {
     position: absolute;
     padding: 0;

@@ -27,38 +27,44 @@
             <form action="echo.htmlacademy.ru" class="filter__form">
               <fieldset class="filter__category">
                 <h3 class="filter__title">Инфраструктура:</h3>
-                <p>
+                <p class="checkbox-group">
                   <input type='checkbox' name='filter__optional' id='filter__optional_pool' class='filter__checkbox visually-hidden' checked="checked">
-                  <span class="filter__checkbox-indicator"></span>
-                  <label for='filter__optional_pool' class="filter__label">Бассейн</label>
+                  <label for='filter__optional_pool' class="filter__label">
+                    <span class="filter__checkbox-indicator"></span>
+                    Бассейн</label>
                 </p>
-                <p>
+                <p class="checkbox-group">
                   <input type='checkbox' name='filter__optional' id='filter__optional_parking' class='filter__checkbox visually-hidden'>
-                  <span class="filter__checkbox-indicator"></span>
-                  <label for='filter__optional_parking' class="filter__label">Парковка</label>
+                  <label for='filter__optional_parking' class="filter__label">
+                    <span class="filter__checkbox-indicator"></span>
+                    Парковка</label>
                 </p>
-                <p>
+                <p class="checkbox-group">
                   <input type='checkbox' name='filter__optional' id='filter__optional_wifi' class='filter__checkbox visually-hidden'>
-                  <span class="filter__checkbox-indicator"></span>
-                  <label for='filter__optional_wifi' class="filter__label">Wi-fi</label>
+                  <label for='filter__optional_wifi' class="filter__label">
+                    <span class="filter__checkbox-indicator"></span>
+                    Wi-fi</label>
                 </p>  
               </fieldset>
               <fieldset class="filter__category">
                 <h3 class="filter__title">Тип жилья:</h3>
-                <p>
+                <p class="checkbox-group">
                   <input type='checkbox' name='filter__housing' id='filter__housing_hotel' class='filter__checkbox visually-hidden' checked="checked">
-                  <span class="filter__checkbox-indicator"></span>
-                  <label for='filter__housing_hotel' class="filter__label">Гостиница</label>
+                  <label for='filter__housing_hotel' class="filter__label">
+                    <span class="filter__checkbox-indicator"></span>
+                    Гостиница</label>
                 </p>
-                <p>
-                  <input type='checkbox' name='filter__housing' id='filter__housing_motel' class='filter__checkbox visually-hidden' checked="checked">
-                  <span class="filter__checkbox-indicator"></span>
-                  <label for='filter__housing_motel' class="filter__label">Мотель</label>
+                <p class="checkbox-group">
+                  <input type='checkbox' name='filter__housing' id='filter__housing_motel' class='filter__checkbox visually-hidden' checked>
+                  <label for='filter__housing_motel' class="filter__label">
+                    <span class="filter__checkbox-indicator"></span>
+                    Мотель</label>
                 </p>
-                <p>
+                <p class="checkbox-group">
                   <input type='checkbox' name='filter__housing' id='filter__housing_apartments' class='filter__checkbox visually-hidden' checked="checked">
-                  <span class="filter__checkbox-indicator"></span>
-                  <label for='filter__housing_apartments' class="filter__label">Апартаменты</label>
+                  <label for='filter__housing_apartments' class="filter__label">
+                    <span class="filter__checkbox-indicator"></span>
+                    Апартаменты</label>
                 </p>
               </fieldset>
               <div>
@@ -67,24 +73,24 @@
                   <!-- Текстовые поля ввода -->
                   <div class="filter__price-wrap">
                     <p>
-                      <label for='filter-price-input-min' class="filter__price-label"></label>
-                      <input type='checkbox' name='filter__price-input_min' id='filter-price-input-min' class='filter__price-input'>
+                      <label for='filter-price-input-min' class="filter__price-label">От</label>
+                      <input type='text' name='filter__price-input_min' id='filter-price-input-min' class='filter__price-input' value="0">
                     </p>
                     <p>
-                      <label for='filter-price-input-max' class="label"></label>
-                      <input type='checkbox' name='filter__price-input_max' id='filter-price-input-max' class='filter__price-input'>
+                      <label for='filter-price-input-max' class="label">До</label>
+                      <input type='text' name='filter__price-input_max' id='filter-price-input-max' class='filter__price-input' value="3000">
                     </p>
                   </div>
                   <!-- Виджет с ползунками минимальной и максимальной цены -->
                   <div class="filter__price-range">
                     <div class="filter__price-select">
-                      <span class="filter__price-handler_min"></span>
-                      <span class="filter__price-handler_max"></span>
+                      <span class="filter__price-handler filter__price-handler_min"></span>
+                      <span class="filter__price-handler filter__price-handler_max"></span>
                     </div>
                   </div>
                 </fieldset>
 
-                <button class="filter__submit">Показать</button>
+                <button class="filter__submit button">Показать</button>
               </div>
             </form>
           </section>
