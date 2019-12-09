@@ -1,44 +1,114 @@
 'use strict'
 
-var orderPopup = {
-  toggleButton: document.getElementById('order-button-toggle'),
-  popupForm: document.getElementById('order-form-popup')
-}
+// Работа с формой
+;(function() {
+  window.popup = openBookingForm;
 
-// console.log(orderPopup.popupForm.classList);
-
-if (orderPopup.popupForm) {
-  orderPopup.toggleButton.addEventListener('click', toggleOrderForm(orderPopup.popupForm, 'order__form_hidden'), false);
-}
-
-function toggleOrderForm(popup, className) {
-  return function() {
-    popup.classList.toggle(className);
+  // Ищем элементы, с которыми будем взаимодействовать (кнопка и popup)
+  var orderPopup = {
+    toggleButton: document.getElementById('order-button-toggle'),
+    popupForm: document.getElementById('order-form-popup')
   }
-}
+    
+  function openBookingForm() {
+    if (orderPopup.popupForm) {
+      orderPopup.toggleButton.addEventListener('click', toggleOrderForm(orderPopup.popupForm, 'order__form_hidden'), false);
+    }
+  }
+  
+  function toggleOrderForm(popup, className) {
+    return function() {
+      popup.classList.toggle(className);
+    }
+  }
+  
+}());
 
-function check(foo) {
-  return (foo) ? true : false;
-}
+// Работа с 
+;(function() {
+  window.doubleRange = doubleRange;
 
-// var modalCheckbox = document.querySelector("#toggle-booking-form-checkbox");
+  function doubleRange() {
+    range.handleMin.addEventListener('mousedown', onMouseDownHandlerMin, false);
+    range.handleMax.addEventListener('mousedown', onMouseDownHandlerMax, false);
+  
+  }
 
-// Так как данная реализация кнопки открывается засчет состояния выбора/снятия
-// checkbox'а, то вешать прикреплять данную функцию к кнопке нет необходимости,
-// т.к. она и так работает на чистом CSS.
+  var config = {
+    minRange: 0,
+    maxRange: 5000,
+    defaultMin: 0,
+    defaultMax: 3000
+  }
 
-// Дополнительное требование п.4.1 говорит о том, что модальное окно должно
-// открываться засчет JavaScript. Выполнять это лучше с использованием css классов,
-// а вместо checkbox лучше использовать обычную кнопку. Но в таком случае при
-// отключенном JavaScript пользователи не смогут воспользоваться данным модальным окном
+  var range = {
+    container: document.querySelector('.filter__price-range'),
+    selected: document.querySelector('.filter__price-select'),
+    handleMin: document.querySelector('.filter__price-handler_min'),
+    handleMax: document.querySelector('.filter__price-handler_max')
+  }
 
-// Как вариант п.4.1 можно реализовать в другой ветке git 
-// function modalViewToggle_test() {
-//   if (modalCheckbox) {
-//     modalCheckbox.checked = !modalCheckbox.checked;
-//   }
-// }
+  var state = {
+    valueMin: config.defaultMin,
+    valueMax: config.defaultMax
+  }
 
-// window.onload = function() {
-//   modalViewToggle_test();
-// }
+  var props = {
+
+  }
+
+  // События Левого ползунка
+  
+  function onMouseDownHandlerMin(event) {
+    var shiftX = event.pageX - getCoords(range.selected).left;
+    console.log(shiftX);
+  
+    document.addEventListener('mousemove', onMouseMoveHandlerMin)
+  }
+
+  function onMouseMoveHandlerMin(){
+    console.log('Left move!');
+    
+    document.addEventListener('mouseup', onMouseUpHandlerMin);
+  }
+
+  function onMouseUpHandlerMin() {
+    document.removeEventListener('mousemove', onMouseMoveHandlerMin);
+  }
+
+  // События правого ползунка
+
+  function onMouseDownHandlerMax() {
+    var shiftX = event.pageX - getCoords(range.selected).left;
+    console.log(shiftX);
+    
+    document.addEventListener('mousemove', onMouseMoveHandlerMax)
+  }
+
+  function onMouseMoveHandlerMax() {
+    console.log('Right move!');
+    
+    document.addEventListener('mouseup', onMouseUpHandlerMax);
+  }
+
+  function onMouseUpHandlerMax() {
+    document.removeEventListener('mousemove', onMouseMoveHandlerMax);
+  }
+
+
+  // Вспомогательные функции
+
+  function getCoords(element) {
+    var coords = element.getBoundingClientRect();
+    return {
+      left: coords.left,
+      right: coords.right
+    };
+  }
+
+}());
+
+// Подключаем скрипт работы с всплывающей формой
+popup();
+// Подключаем скрипт работы с двойным ползунком выбора цен
+doubleRange();
