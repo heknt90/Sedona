@@ -74,18 +74,18 @@
                   <div class="filter__price-wrap">
                     <p>
                       <label for='filter-price-input-min' class="filter__price-label">От</label>
-                      <input type='text' name='filter__price-input_min' id='filter-price-input-min' class='filter__price-input' value="0">
+                      <input type='text' name='filter__price-input_min' id='filter-price-input-min' class='filter__price-input' value="0" data-range="input-min">
                     </p>
                     <p>
                       <label for='filter-price-input-max' class="label">До</label>
-                      <input type='text' name='filter__price-input_max' id='filter-price-input-max' class='filter__price-input' value="3000">
+                      <input type='text' name='filter__price-input_max' id='filter-price-input-max' class='filter__price-input' value="3000" data-range="input-max">
                     </p>
                   </div>
                   <!-- Виджет с ползунками минимальной и максимальной цены -->
                   <div class="filter__price-range">
                     <div class="filter__price-select">
-                      <span class="filter__price-handler filter__price-handler_min"></span>
-                      <span class="filter__price-handler filter__price-handler_max"></span>
+                      <span class="filter__price-handler filter__price-handler_min" data-range="handler-min"></span>
+                      <span class="filter__price-handler filter__price-handler_max" data-range="handler-max"></span>
                     </div>
                   </div>
                 </fieldset>
