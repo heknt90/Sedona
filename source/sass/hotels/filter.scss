@@ -1,5 +1,5 @@
 .filter {
-    background-image: url('../../img/filter background.jpg');
+    background-image: url('../img/filter background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     padding: 28px 72px 31px;
@@ -30,7 +30,7 @@
         height: 23px;
         margin-right: 17px;
         border: none;
-        background-image: url('./../../img/checkbox-on.svg');
+        background-image: url('../img/checkbox-on.svg');
     }
 
     &__checkbox:disabled {
@@ -44,7 +44,7 @@
         }
 
         &:checked + .filter__label .filter__checkbox-indicator {
-            background-image: url('./../../img/checkbox-on-disabled.svg');
+            background-image: url('../img/checkbox-on-disabled.svg');
         }
     }
 
@@ -83,7 +83,7 @@
         background: none;
         border: none;
         // background-color: rgba(pink, .3);
-        width: 40px;
+        width: 50px;
         outline: none;
     }
 
@@ -103,6 +103,7 @@
             right: 0;
             height: 2px;
             background-color: #fff;
+            transition: left 0.17s, right 0.17s;
         }
 
         &-handler {

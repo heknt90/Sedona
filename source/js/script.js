@@ -28,22 +28,46 @@
 ;(function() {
   window.doubleRange = doubleRange;
 
+  // Объект виджета с ключевыми элементами
+  var range = {
+    container: document.querySelector('.filter__price-range'),
+    selected: document.querySelector('.filter__price-select'),
+    handleMin: document.querySelector('.filter__price-handler_min'),
+    handleMax: document.querySelector('.filter__price-handler_max'),
+    inputMin: document.querySelector('#filter-price-input-min'),
+    inputMax: document.querySelector('#filter-price-input-max')
+  }
+
+  var check = {
+    handlers: function() {
+      return (range.container && range.handleMin && range.handleMax);
+    },
+    inputs: function() {
+      return range.container && range.inputMin && range.inputMax
+    }
+  }
+
   function doubleRange() {
-    // Создаем кастомизированный draggable
-    range.handleMin.addEventListener('mousedown', onMouseDownHandlerMin, false);
-    range.handleMax.addEventListener('mousedown', onMouseDownHandlerMax, false);
+    if (check.handlers()) {
+      // Создаем кастомизированный draggable
+      range.handleMin.addEventListener('mousedown', onMouseDownHandlerMin, false);
+      range.handleMax.addEventListener('mousedown', onMouseDownHandlerMax, false);
+  
+      // touch события
+      range.handleMin.addEventListener('touchstart', onTouchStartHandlerMin, false);
+      range.handleMax.addEventListener('touchstart', onTouchStartHandlerMax, false);
+  
+      // Отменяем стандартный draggable
+      range.handleMin.addEventListener('dragstart', onDragStart, false);
+      range.handleMax.addEventListener('dragstart', onDragStart, false);
+    }
 
-    // touch события
-    range.handleMin.addEventListener('touchstart', onTouchStartHandlerMin, false);
-    range.handleMax.addEventListener('touchstart', onTouchStartHandlerMax, false);
+    if (check.inputs()) {
+      // Вешаем обработчики событий для полей ввода
+      range.inputMin.addEventListener('change', onInputChange, false);
+      range.inputMax.addEventListener('change', onInputChange, false);
+    }
 
-    // Отменяем стандартный draggable
-    range.handleMin.addEventListener('dragstart', onDragStart, false);
-    range.handleMax.addEventListener('dragstart', onDragStart, false);
-
-    // Вешаем обработчики событий для полей ввода
-    range.inputMin.addEventListener('change', onInputChange, false);
-    range.inputMax.addEventListener('change', onInputChange, false);
   }
 
   // Настройки диапазона цен
@@ -58,15 +82,6 @@
     defaultMax: 3000
   }
 
-  // Объект виджета с ключевыми элементами
-  var range = {
-    container: document.querySelector('.filter__price-range'),
-    selected: document.querySelector('.filter__price-select'),
-    handleMin: document.querySelector('.filter__price-handler_min'),
-    handleMax: document.querySelector('.filter__price-handler_max'),
-    inputMin: document.querySelector('#filter-price-input-min'),
-    inputMax: document.querySelector('#filter-price-input-max')
-  }
 
   // Главные параметры состояния
   var state = {
@@ -114,7 +129,9 @@
 
   // Сразу после получения узлов, приводим положения ползунков и значения в полях в рабочее состояние
   // в соответствии с состоянием виджета
-  setDefaults();
+  if (check.handlers()) {
+    setDefaults();
+  }
 
   // Обработчик зажатия Левого ползунка
   function onMouseDownHandlerMin(event) {
@@ -232,7 +249,7 @@
   }
 
   function onTouchStartHandlerMin(event) {
-    // Получаем смещение ползунка относительно координаты курсора
+    // Получаем смещение ползунка относительно координаты зажатия
     props.shiftX = event.touches[0].pageX - getCoords(range.selected).left;
     
     // Вешаем событие перетаскивания ползунка
@@ -240,7 +257,7 @@
   }
 
   function onTouchMoveHandlerMin(event) {
-    //Вычисляем положение ползунка относительно левого края
+    //Вычисляем положение ползунка относительно левого края виджета
     var newLeft = event.touches[0].pageX - getCoords(range.container).left - props.shiftX;
     
     // Определяем максимальное и минимальное значение, в котором может двигаться ползунок минимальной цены
@@ -254,23 +271,22 @@
     setCoordinate(range.handleMin, newLeft);
     setInputValue(range.inputMin, Math.floor(value));
 
-    // Изменяем состояние, полученное засчет смещения ползунка мышью
+    // Изменяем состояние, полученное засчет смещения ползунка по горизонтали
     state.valueMin = Math.floor(value);
     // Сохраняем последнее значение минимальной цены в атрибуте value поля ввода
     range.inputMin.defaultValue = state.valueMin;
     
-    // Прекращаем все взаимодействия при "отжатии" кнопки мыши
+    // Прекращаем все взаимодействия при завершении touch нажатия
     document.addEventListener('touchend', onTouchEndHandlerMin, false);
   }
 
   function onTouchEndHandlerMin(event) {
-    // console.log(state);
     document.removeEventListener('touchmove', onTouchMoveHandlerMin);
     return false;
   }
 
   function onTouchStartHandlerMax(event) {
-    // Получаем смещение ползунка относительно положения курсора мыши
+    // Получаем смещение ползунка относительно нажатия
     props.shiftX = event.touches[0].pageX - getCoords(range.selected).right;
 
     // Вешаем обработчик при перемещении ползунка
@@ -296,12 +312,11 @@
     // Сохраняем последнее значение максимальной цены в атрибуте value поля ввода
     range.inputMax.defaultValue = state.valueMax;
     
-    // Прекращаем все взаимодействия при отжатии кнопки мыши на правом ползунке
+    // Прекращаем все взаимодействия при завершении нажатия на правом ползунке
     document.addEventListener('touchend', onTouchEndHandlerMax, false);
   }
 
   function onTouchEndHandlerMax(event) {
-    // console.log(state);
     document.removeEventListener('touchmove', onTouchMoveHandlerMax);
     return false;
   }
