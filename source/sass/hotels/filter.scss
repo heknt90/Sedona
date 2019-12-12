@@ -122,11 +122,13 @@
             }
 
             &_min {
-                left: 0;
+                left: -10px;
+                // left: 0;
             }
 
             &_max {
-                right: 0;
+                right: -10px;
+                // right: 0;
             }
         }
     }
