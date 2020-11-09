@@ -1,6 +1,7 @@
 # Шаблон для туристического городка Sedona
 
-![](layout/cover.JPG)
+![](layout/cover.jpg)
+
 
 [Демонстрация верстки](https://heknt90.github.io/Sedona/)
 
